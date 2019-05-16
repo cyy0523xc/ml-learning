@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#
+# 缺失值处理，特征工程
 # Author: alex
 # Created Time: 2019年03月13日 星期三 00时31分39秒
 import pandas as pd
@@ -35,4 +35,6 @@ X = imputer.fit_transform(df2)
 df3 = pd.DataFrame(X, columns=df2.columns)
 df3.info()
 
-
+# 对类别字段进行OneHot编码
+df4 = pd.get_dummies(df)
+df4.info()
